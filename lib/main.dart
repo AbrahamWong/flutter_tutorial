@@ -10,16 +10,33 @@ void main() {
       appBar: AppBar(
         title: const Text("Hello World"),
         centerTitle: true,
+
+        backgroundColor: Colors.red[600],
       ),
 
       // body: const Text("Hi Abraham"),  => displays small "Hi Abraham" on top left body
       body: const Center(
-        child: Text("Hi Abraham"),
+        // child: Text("Hi Abraham"),     => displays vanilla "Hi Abraham" without text variation
+        child: Text(
+          "Hi Abraham",
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 1.25,
+            color: Colors.grey,
+
+            // To add custom fonts, edit pubspec.yaml first according
+            // to the instructions given
+            fontFamily: "BalsamiqSans",
+          ),
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         child: const Text("Click"),
+
+        backgroundColor: Colors.red[600],
       ),
 
     ),

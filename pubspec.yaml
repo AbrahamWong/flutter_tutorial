@@ -84,6 +84,18 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: BalsamiqSans
+      fonts:
+      - asset: fonts/BalsamiqSans-Regular.ttf
+      - asset: fonts/BalsamiqSans-Italic.ttf
+        style: italic
+      - asset: fonts/BalsamiqSans-Bold.ttf
+        weight: 700
+      - asset: fonts/BalsamiqSans-BoldItalic.ttf
+        style: italic
+        weight: 700
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
