@@ -27,30 +27,54 @@ class Home extends StatelessWidget {
       ),
 
       body: Center(
-        // child: Text(
-        //   "Hi Abraham Wong",
-        //   style: TextStyle(
-        //     fontSize: 20.0,
-        //     fontWeight: FontWeight.bold,
-        //     letterSpacing: 1.25,
-        //     color: Colors.grey,
-        //     fontFamily: "BalsamiqSans",
+        // To use icon, use Icon() widget and access the variety of icons in
+        // Icons.<icon_name>
+        // child: Icon(
+        //   Icons.airport_shuttle,
+        //   color: Colors.amber[700],
+        //   size: 50,
+        // )
+
+        // Meanwhile, to add buttons, use RaisedButton() or FlatButton()
+        // RaisedButton deprecated, use ElevatedButton
+        // FlatButton deprecated, use TextButton
+        // ElevatedButton uses style parameter to change colors and such
+        // child: ElevatedButton(
+        //   onPressed: () {
+        //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        //       content: Text("Button pressed"),
+        //     ));
+        //   },
+        //   child: const Text("Click Me!"),
+        //   style: ElevatedButton.styleFrom(
+        //     primary: Colors.lightBlue,
         //   ),
         // ),
 
-        // To add image, use Image() widget, and pick between
-        //    add image from internet => Image(image: NetworkImage(url)) or Image.network(url)
-        //    add image from app => Image(image: AssetImage(path)) or Image.asset(path)
-        // remember to ALWAYS update pubspec.yaml to include the said image path
+        // child: TextButton(
+        //     onPressed: () {},
+        //     child: const Text("Click me!"))
 
-        // child: Image(
-        //   // image: NetworkImage("https://pbs.twimg.com/media/E_29WBKVEAQsFqD?format=jpg&name=large")
-        //   image: AssetImage("assets/image-1.png")
+        // You can also make a button with icons...
+        // child: ElevatedButton.icon(
+        //     onPressed: () {
+        //       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        //         content: Text("Button pressed"),
+        //       ));
+        //     },
+        //     icon: const Icon(Icons.email),
+        //     label: const Text("Send e-mail"),
+        //     style: ElevatedButton.styleFrom(
+        //         primary: Colors.amber
+        //     ),
         // ),
 
-        child: Image.network("https://pbs.twimg.com/media/E_29WBKVEAQsFqD?format=jpg&name=large")
-        // child: Image.asset("assets/image-1.png")
-
+        // ...or icon as a button
+        child: IconButton(
+          icon: const Icon(Icons.alternate_email),
+          onPressed: () {  },
+          color: Colors.amber,
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
