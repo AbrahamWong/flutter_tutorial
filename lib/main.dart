@@ -4,29 +4,36 @@ import 'package:flutter/material.dart';
 
 void main() {
   // runApp(const MyApp());
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     // home: Text("Hello World!"),        => displays an ugly looking "Hello World"
-    home: Scaffold(
+
+    // now Hot Reload can be used!
+    // create a class that extends StatelessWidget
+    // and move the Scaffold() widget to there
+    home: Home(),
+  ));
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Hello World"),
         centerTitle: true,
-
         backgroundColor: Colors.red[600],
       ),
 
-      // body: const Text("Hi Abraham"),  => displays small "Hi Abraham" on top left body
       body: const Center(
-        // child: Text("Hi Abraham"),     => displays vanilla "Hi Abraham" without text variation
         child: Text(
-          "Hi Abraham",
+          "Hi Abraham Wong",
           style: TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
             letterSpacing: 1.25,
             color: Colors.grey,
-
-            // To add custom fonts, edit pubspec.yaml first according
-            // to the instructions given
             fontFamily: "BalsamiqSans",
           ),
         ),
@@ -35,13 +42,13 @@ void main() {
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         child: const Text("Click"),
-
         backgroundColor: Colors.red[600],
       ),
 
-    ),
-  ));
+    );
+  }
 }
+
 
 // class MyApp extends StatelessWidget {
 //   const MyApp({Key? key}) : super(key: key);
