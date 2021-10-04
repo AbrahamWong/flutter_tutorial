@@ -26,17 +26,31 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      body: const Center(
-        child: Text(
-          "Hi Abraham Wong",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.25,
-            color: Colors.grey,
-            fontFamily: "BalsamiqSans",
-          ),
-        ),
+      body: Center(
+        // child: Text(
+        //   "Hi Abraham Wong",
+        //   style: TextStyle(
+        //     fontSize: 20.0,
+        //     fontWeight: FontWeight.bold,
+        //     letterSpacing: 1.25,
+        //     color: Colors.grey,
+        //     fontFamily: "BalsamiqSans",
+        //   ),
+        // ),
+
+        // To add image, use Image() widget, and pick between
+        //    add image from internet => Image(image: NetworkImage(url)) or Image.network(url)
+        //    add image from app => Image(image: AssetImage(path)) or Image.asset(path)
+        // remember to ALWAYS update pubspec.yaml to include the said image path
+
+        // child: Image(
+        //   // image: NetworkImage("https://pbs.twimg.com/media/E_29WBKVEAQsFqD?format=jpg&name=large")
+        //   image: AssetImage("assets/image-1.png")
+        // ),
+
+        child: Image.network("https://pbs.twimg.com/media/E_29WBKVEAQsFqD?format=jpg&name=large")
+        // child: Image.asset("assets/image-1.png")
+
       ),
 
       floatingActionButton: FloatingActionButton(
