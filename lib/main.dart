@@ -26,20 +26,46 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      // Row() allows you to place multiple Widget in a single row
-      // only using Row() is fine and dandy until you realize that
-      // there is no spacing on the elements whatsoever
-      // Use MainAxisAlignment to align row elements horizontally
-      // Use CrossAxisAlignment to align row elements vertically
-      // there is no margin on Row() btw, maybe use Container for that.
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // Column() allows you to place multiple Widget in a single column
+      // only using Column() is fine and dandy until you realize that
+      // there is no spacing on the elements whatsoever and the Column()
+      // stuck on the up left side of body
+
+      // THE FUNNY THING THAT YOU MUST UNDERSTAND IS
+      // Use MainAxisAlignment to align column in the MAIN AXIS / vertically
+      // Use CrossAxisAlignment to align column in the CROSS / OPPOSITE AXIS,
+      //    which is horizontally
+      // there is no margin on Column().
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Icon(Icons.ac_unit_rounded),
-          const Text("Temperature: 39 C"),
-          ElevatedButton(
-              onPressed: () {},
-              child: const Text("Learn more."))
+          // The thing that I'm confused is that this Row() doesn't automatically
+          // centers as the alignment says. Does that mean that Row() takes the
+          // whole screen width? idk?
+          Row(
+            // It can be anticipated with mainAxisAlignment
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text("what da "),
+              Text("dog doing?")
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.red,
+            child: const Text("One"),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.yellow,
+            child: const Text("Two"),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.green,
+            child: const Text("Three"),
+          ),
         ],
       ),
 
