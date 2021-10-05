@@ -26,56 +26,22 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      body: Center(
-        // To use icon, use Icon() widget and access the variety of icons in
-        // Icons.<icon_name>
-        // child: Icon(
-        //   Icons.airport_shuttle,
-        //   color: Colors.amber[700],
-        //   size: 50,
-        // )
-
-        // Meanwhile, to add buttons, use RaisedButton() or FlatButton()
-        // RaisedButton deprecated, use ElevatedButton
-        // FlatButton deprecated, use TextButton
-        // ElevatedButton uses style parameter to change colors and such
-        // child: ElevatedButton(
-        //   onPressed: () {
-        //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        //       content: Text("Button pressed"),
-        //     ));
-        //   },
-        //   child: const Text("Click Me!"),
-        //   style: ElevatedButton.styleFrom(
-        //     primary: Colors.lightBlue,
-        //   ),
-        // ),
-
-        // child: TextButton(
-        //     onPressed: () {},
-        //     child: const Text("Click me!"))
-
-        // You can also make a button with icons...
-        // child: ElevatedButton.icon(
-        //     onPressed: () {
-        //       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        //         content: Text("Button pressed"),
-        //       ));
-        //     },
-        //     icon: const Icon(Icons.email),
-        //     label: const Text("Send e-mail"),
-        //     style: ElevatedButton.styleFrom(
-        //         primary: Colors.amber
-        //     ),
-        // ),
-
-        // ...or icon as a button
-        child: IconButton(
-          icon: const Icon(Icons.alternate_email),
-          onPressed: () {  },
-          color: Colors.amber,
-        ),
+      // Container is used to contains a Widget, usually used for margin
+      // and padding
+      body: Container(
+        // padding is used to add padding, duh.
+        // use EdgeInsets to add padding / margin
+        padding: const EdgeInsets.all(16.0),
+        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+        color: Colors.grey[400],
+        child: const Text("Ayy Lmao"),
       ),
+
+      // or you know, you can just use Padding()
+      // body: const Padding(
+      //   padding: EdgeInsets.fromLTRB(15, 10, 5, 2),
+      //   child: Text("with Padding()"),
+      // ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
