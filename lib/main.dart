@@ -26,22 +26,22 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
 
-      // Container is used to contains a Widget, usually used for margin
-      // and padding
-      body: Container(
-        // padding is used to add padding, duh.
-        // use EdgeInsets to add padding / margin
-        padding: const EdgeInsets.all(16.0),
-        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-        color: Colors.grey[400],
-        child: const Text("Ayy Lmao"),
+      // Row() allows you to place multiple Widget in a single row
+      // only using Row() is fine and dandy until you realize that
+      // there is no spacing on the elements whatsoever
+      // Use MainAxisAlignment to align row elements horizontally
+      // Use CrossAxisAlignment to align row elements vertically
+      // there is no margin on Row() btw, maybe use Container for that.
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          const Icon(Icons.ac_unit_rounded),
+          const Text("Temperature: 39 C"),
+          ElevatedButton(
+              onPressed: () {},
+              child: const Text("Learn more."))
+        ],
       ),
-
-      // or you know, you can just use Padding()
-      // body: const Padding(
-      //   padding: EdgeInsets.fromLTRB(15, 10, 5, 2),
-      //   child: Text("with Padding()"),
-      // ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
